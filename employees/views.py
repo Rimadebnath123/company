@@ -51,7 +51,6 @@ class EmployeeViewSet(APIView):
     permission_classes = [IsAuthenticated] 
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
-    permission_classes = [permissions.AllowAny]
 
     def get(self, request, id=None):
         if id:
